@@ -1,7 +1,7 @@
 {
   "name": "timetrack",
   "productName": "timetrack",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Simple desktop application to track your time spent on different projects.",
   "main": ".vite/build/main.js",
   "scripts": {
@@ -9,6 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
+    "test": "vitest --run ./src",
+    "test:watch": "vitest ./src",
     "lint": "eslint --ext .ts,.tsx .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|yml)\"",
     "update-interactive": "ncu --interactive",
@@ -37,8 +39,8 @@
     "@electron-forge/maker-zip": "7.4.0",
     "@electron-forge/plugin-auto-unpack-natives": "7.4.0",
     "@electron-forge/plugin-fuses": "7.4.0",
-    "@mistweaverco/electron-forge-plugin-vite": "7.4.2",
     "@electron/fuses": "1.8.0",
+    "@mistweaverco/electron-forge-plugin-vite": "7.4.2",
     "@types/js-yaml": "4.0.9",
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
@@ -58,7 +60,8 @@
     "typescript": "4.5.4",
     "vite": "5.2.11",
     "vite-plugin-static-copy": "1.0.4",
-    "vite-tsconfig-paths": "4.3.2"
+    "vite-tsconfig-paths": "4.3.2",
+    "vitest": "1.6.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.5.2",

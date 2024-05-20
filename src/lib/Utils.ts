@@ -20,28 +20,3 @@ export const getHMSStringFromSeconds = (s: number) => {
   const { hours, minutes, seconds } = getHMSFromSeconds(s)
   return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
-
-const removeActiveClassnameGeneric = (
-  rootQuery: string,
-  itemsQuery: string,
-) => {
-  const root = document.querySelector(rootQuery)
-  if (root) {
-    const items = root.querySelectorAll(itemsQuery)
-    if (items) {
-      items.forEach((n: HTMLDivElement) => n.classList.remove('is-active'))
-    }
-  }
-}
-
-export const removeActiveClassnameTasks = () => {
-  removeActiveClassnameGeneric('[data-tasks-list]', '.tasklist-item')
-}
-
-export const removeActiveClassnameTaskDefinitions = () => {
-  removeActiveClassnameGeneric('[data-taskdef-list]', '.panel-block')
-}
-
-export const removeActiveClassnameProjects = () => {
-  removeActiveClassnameGeneric('[data-projects-list]', '.panel-block')
-}

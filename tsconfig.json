@@ -13,6 +13,9 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "ESNext",
+    "types": [
+      "vite/globals"
+    ],
     "paths": {
       "@components/*": ["src/components/*"],
       "@lib/*": ["./lib/*"]
